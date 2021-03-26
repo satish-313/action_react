@@ -1,20 +1,17 @@
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Main from "./pages/Main";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>hello world! </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Action test
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">{Main}</Route>
+        <Route exact path="/dashboard">{Dashboard}</Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
